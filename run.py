@@ -1,10 +1,13 @@
+from infra.repository.atores_repository import AtoresRepository
 from infra.repository.filmes_repository import FilmesRepository
 
-repo = FilmesRepository()
+repo = AtoresRepository()
+response = repo.select()
+#print(response)
 
-repo.insert('algumFIlme', 'comedia', 2010)
-repo.delete('Batman')
 
-data = repo.select()
-
-print(data)
+repo2 = FilmesRepository()
+response2 = repo2.select()
+filme = response2[0]
+print(filme.titulo)
+print(filme.atores)
