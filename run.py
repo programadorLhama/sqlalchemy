@@ -7,7 +7,5 @@ response = repo.select()
 
 
 repo2 = FilmesRepository()
-response2 = repo2.select()
-filme = response2[0]
-print(filme.titulo)
-print(filme.atores)
+response2 = repo2.select_drama_filmes()
+print(response2)
